@@ -64,3 +64,18 @@ function removeShow() {
 
 //  Listen for tab click
 dots.forEach((item) => item.addEventListener("click", selectItem));
+
+$(document).ready(function () {
+  $(".portfolio__slider").slick({
+    arrows: true,
+    dots: true,
+    adaptiveHeight: true,
+    variableWidth: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    waitForAnimate: false,
+    slidesToShow: 3,
+    rows: 1,
+    centerMode: true,
+  });
+});
