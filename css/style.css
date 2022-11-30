@@ -193,6 +193,7 @@ body {
 .about-me__text-block {
   font-size: 1.3rem; }
   .about-me__text-block h3 {
+    color: #333;
     line-height: 200%; }
 
 .about-animation {
