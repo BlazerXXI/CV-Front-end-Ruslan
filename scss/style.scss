@@ -428,9 +428,7 @@ body {
     border-radius: 30px;
     z-index: 18;
   }
-  .slick-center {
-    transform: translate(0, 0px);
-  }
+
   @include min920 {
     img:hover {
       transform: translate(0px, 0px) scale(1.5);
@@ -438,6 +436,9 @@ body {
       box-shadow: none;
       border-radius: 15px;
       z-index: 20;
+    }
+    .slick-center {
+      transform: translate(0, 0px) scale(1.3);
     }
   }
 }
