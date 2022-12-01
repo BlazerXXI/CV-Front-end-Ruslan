@@ -431,12 +431,14 @@ body {
   .slick-center {
     transform: translate(0, 0px);
   }
-  img:hover {
-    transform: translate(0px, 0px) scale(1.5);
-    filter: drop-shadow(8px 8px 15px #18a9ce);
-    box-shadow: none;
-    border-radius: 15px;
-    z-index: 20;
+  @include min920 {
+    img:hover {
+      transform: translate(0px, 0px) scale(1.5);
+      filter: drop-shadow(8px 8px 15px #18a9ce);
+      box-shadow: none;
+      border-radius: 15px;
+      z-index: 20;
+    }
   }
 }
 

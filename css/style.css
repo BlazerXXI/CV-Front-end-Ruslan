@@ -433,15 +433,16 @@ body {
   .portfolio__slider .slick-center {
     -webkit-transform: translate(0, 0px);
             transform: translate(0, 0px); }
-  .portfolio__slider img:hover {
-    -webkit-transform: translate(0px, 0px) scale(1.5);
-            transform: translate(0px, 0px) scale(1.5);
-    -webkit-filter: drop-shadow(8px 8px 15px #18a9ce);
-            filter: drop-shadow(8px 8px 15px #18a9ce);
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    border-radius: 15px;
-    z-index: 20; }
+  @media (min-width: 920px) {
+    .portfolio__slider img:hover {
+      -webkit-transform: translate(0px, 0px) scale(1.5);
+              transform: translate(0px, 0px) scale(1.5);
+      -webkit-filter: drop-shadow(8px 8px 15px #18a9ce);
+              filter: drop-shadow(8px 8px 15px #18a9ce);
+      -webkit-box-shadow: none;
+              box-shadow: none;
+      border-radius: 15px;
+      z-index: 20; } }
 
 .portfolio-works-block {
   display: -webkit-box;
