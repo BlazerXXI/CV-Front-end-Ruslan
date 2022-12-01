@@ -73,7 +73,7 @@ $(document).ready(function () {
     variableWidth: true,
     autoplay: true,
     autoplaySpeed: 2000,
-    waitForAnimate: false,
+    waitForAnimate: true,
     slidesToShow: 3,
     rows: 1,
     centerMode: true,

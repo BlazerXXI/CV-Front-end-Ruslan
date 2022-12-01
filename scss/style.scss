@@ -350,7 +350,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 15px;
+  gap: 15rem;
 }
 
 .slider {
@@ -438,6 +438,7 @@ body {
       z-index: 20;
     }
     .slick-center {
+      filter: drop-shadow(10px 10px 20px #000);
       transform: translate(0, 0px) scale(1.3);
     }
   }
