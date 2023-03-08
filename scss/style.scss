@@ -75,8 +75,8 @@ body {
 }
 /* -----------bg------------- */
 .bg {
-  background: url("../img/hero/shutterstock_1716854038.jpg") center/cover
-    no-repeat;
+  background: url("../img/hero/shutterstock_1716854038-smallSize.jpg")
+    center/cover no-repeat;
   position: absolute;
   height: 100vh;
   width: 100%;
@@ -223,7 +223,7 @@ body {
 }
 /* ----------my-skills-------------- */
 .my-skills {
-  margin: 0px 0px 120px 0px;
+  margin: 0px 0 120px 0;
 }
 .my-skills__container {
 }
