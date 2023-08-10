@@ -71,7 +71,7 @@ $(document).ready(function () {
 		dots: true,
 		adaptiveHeight: true,
 		variableWidth: true,
-		autoplay: false,
+		autoplay: true,
 		autoplaySpeed: 2000,
 		waitForAnimate: true,
 		slidesToShow: 3,
