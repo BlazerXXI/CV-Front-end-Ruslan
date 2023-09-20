@@ -40,31 +40,6 @@ const hero = new IntersectionObserver((entries) => {
 });
 hero.observe(document.querySelector(".hero__container"));
 
-// slider
-const dots = document.querySelectorAll(".portfolio-dots");
-const slider = document.querySelectorAll(".portfolio-works__list");
-
-// Select tab content item
-function selectItem(e) {
-	removeActive();
-	removeShow();
-	this.classList.add("_active");
-	const slide = document.querySelector(`#${this.id}-content`);
-
-	// Add show class
-	slide.classList.add("show");
-}
-
-function removeActive() {
-	dots.forEach((item) => item.classList.remove("_active"));
-}
-function removeShow() {
-	slider.forEach((item) => item.classList.remove("show"));
-}
-
-//  Listen for tab click
-dots.forEach((item) => item.addEventListener("click", selectItem));
-
 $(document).ready(function () {
 	$(".portfolio__slider").slick({
 		arrows: true,
@@ -77,5 +52,13 @@ $(document).ready(function () {
 		slidesToShow: 3,
 		rows: 1,
 		centerMode: true,
+	});
+
+	$(".header__menu").click(function () {
+		$(".header__menu").toggleClass("active");
+		$(".header__collapse-menu").toggleClass("active");
+	});
+	$(document).click(function (e) {
+		console.log(e.target);
 	});
 });
