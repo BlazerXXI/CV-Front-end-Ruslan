@@ -1,46 +1,55 @@
-const anchors = document.querySelectorAll('a[href*="#"]');
+$(document).ready(function () {
+	const headerHeight = $(".header").outerHeight();
 
-for (let anchor of anchors) {
-	anchor.addEventListener("click", function (e) {
+	// Smooth scrolling for anchor links
+	$('a[href*="#"]').click(function (e) {
 		e.preventDefault();
 
-		const blockID = anchor.getAttribute("href").substr(1);
+		// Get the target ID from the href attribute
+		const blockID = $(this).attr("href").substr(1);
+		const targetElement = $($("#" + blockID));
 
-		document.getElementById(blockID).scrollIntoView({
-			behavior: "smooth",
-			block: "start",
+		if (targetElement.length) {
+			$("html, body").animate(
+				{
+					scrollTop: targetElement.offset().top - headerHeight,
+				},
+				500
+			);
+		}
+	});
+
+	// Intersection Observer for mySkills section
+	const mySkills = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add("square-animation");
+			}
 		});
 	});
-}
+	mySkills.observe($(".my-skills__list")[0]);
 
-const mySkills = new IntersectionObserver((entries) => {
-	entries.forEach((entry) => {
-		if (entry.isIntersecting) {
-			entry.target.classList.add("square-animation");
-		}
+	// Intersection Observer for aboutMe section
+	const aboutMe = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add("about-animation");
+			}
+		});
 	});
-});
-mySkills.observe(document.querySelector(".my-skills__list"));
+	aboutMe.observe($(".about-me__text-block")[0]);
 
-const aboutMe = new IntersectionObserver((entries) => {
-	entries.forEach((entry) => {
-		if (entry.isIntersecting) {
-			entry.target.classList.add("about-animation");
-		}
+	// Intersection Observer for hero section
+	const hero = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add("rev-square-animation");
+			}
+		});
 	});
-});
-aboutMe.observe(document.querySelector(".about-me__text-block"));
+	hero.observe($(".hero__container")[0]);
 
-const hero = new IntersectionObserver((entries) => {
-	entries.forEach((entry) => {
-		if (entry.isIntersecting) {
-			entry.target.classList.add("rev-square-animation");
-		}
-	});
-});
-hero.observe(document.querySelector(".hero__container"));
-
-$(document).ready(function () {
+	// Slick slider for portfolio
 	$(".portfolio__slider").slick({
 		arrows: true,
 		dots: true,
@@ -54,11 +63,24 @@ $(document).ready(function () {
 		centerMode: true,
 	});
 
+	// Toggle active class for header menu
+	const removeActiveMenu = () => {
+		$(".header__menu").removeClass("active");
+		$(".header__collapse-menu").removeClass("active");
+		$(".wrapper").removeClass("active__darkWindow");
+	};
+
 	$(".header__menu").click(function () {
 		$(".header__menu").toggleClass("active");
 		$(".header__collapse-menu").toggleClass("active");
+		$(".wrapper").toggleClass("active__darkWindow");
 	});
+
 	$(document).click(function (e) {
-		console.log(e.target);
+		!e.target.classList.contains("header__nav") &&
+		!e.target.classList.contains("header__menu") &&
+		!e.target.classList.contains("header__menu-span")
+			? removeActiveMenu()
+			: null;
 	});
 });

@@ -54,6 +54,10 @@ body {
 	}
 	// .header__menu
 	&__menu {
+		@include max767 {
+			display: block;
+		}
+		display: none;
 		padding: 25px 0;
 		width: 24px;
 		height: 24px;
@@ -113,24 +117,41 @@ body {
 }
 // header__collapse-menu
 .header__collapse-menu {
-	display: flex;
+	@include max767 {
+		display: flex;
+	}
+	display: none;
 	position: absolute;
 	top: 50px;
 	left: 0;
-	z-index: 40;
 	width: 100%;
 	height: 300px;
 	transform: translateX(-100%);
 	transition: all 0.3s ease 0s;
 	background-color: #f5f5f5;
+	z-index: 40;
 }
+
+.active__darkWindow {
+	transition: all 0.9s ease 0s;
+	@include max767 {
+		&::after {
+			content: "";
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100vh;
+			background-color: #00000080;
+			transition: all 0.9s ease 0s;
+		}
+	}
+}
+
 .header__collapse-menu.active {
 	max-width: 100%;
 	transform: translateX(0%);
 	transition: all 0.3s ease 0s;
-	&:before {
-		
-	}
 	.header__nav {
 		display: flex;
 		justify-content: center;
