@@ -84,6 +84,12 @@ $(document).ready(function () {
 			: null;
 	});
 
+	/*
+This code adds a click event listener to an element with the class "btn-block__link".
+ When the element is clicked, it checks if it does not have the class "active".
+ If it doesn't, it performs a series of animations on elements with the IDs "download" and "check".
+  If it does have the class "active", it does nothing.
+	*/
 	$(".btn-block__link").click(function () {
 		if (!this.classList.contains("active")) {
 			this.classList.add("active");

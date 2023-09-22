@@ -295,7 +295,6 @@ body {
 			background-color: #149a6d81;
 		}
 	}
-
 }
 #download {
 	display: block;
@@ -396,12 +395,22 @@ body {
 }
 .my-skills__list {
 	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	grid-gap: 50px;
+	gap: 50px;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 	justify-content: center;
 	justify-items: center;
 	align-items: center;
 	text-align: center;
+	transition: all 0.3s ease;
+	@include max920 {
+		gap: 20px;
+	}
+	@include max767 {
+		grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+	}
+	* {
+		transition: all 0.3s ease 0s;
+	}
 }
 .show {
 	animation-duration: 1s;
@@ -434,16 +443,16 @@ body {
 	}
 }
 .square-animation {
-	animation-duration: 3.5s;
-	animation-name: slidein;
-	animation-direction: alternate;
+	animation: slidein 4s forwards;
 	@keyframes slidein {
 		from {
-			margin-left: 300%;
+			opacity: 0;
+			transform: translateX(300%);
 		}
 
 		to {
-			margin-left: 0%;
+			opacity: 1;
+			transform: translateX(0%);
 		}
 	}
 }
@@ -466,21 +475,17 @@ body {
 
 	&:hover,
 	&:focus {
-		transform: translate(0px, 0px) rotate(360deg) scale(1.3);
+		transform: translate(0px, 0px) scale(1.3);
 		background-color: #147f9a;
 		filter: drop-shadow(3px 3px 15px $primary);
 	}
+	&:active {
+		transform: scale(0.9);
+	}
 }
 @include max920 {
-	.my-skills__list {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-	}
 }
 @include max767 {
-	.my-skills__list {
-		grid-gap: 20px;
-	}
 	.my-skills__item {
 		width: 100px;
 		height: 100px;
