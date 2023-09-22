@@ -266,6 +266,7 @@ body {
 .btn-block {
 }
 .btn-block__link {
+	overflow: hidden;
 	display: inline-flex;
 	gap: 15px;
 	padding: 20px 50px;
@@ -274,10 +275,36 @@ body {
 	border-radius: 35px;
 	transition: all 0.3s ease 0s;
 	align-items: center;
+	cursor: pointer;
 	&:hover,
 	&:focus {
 		background-color: #147f9a;
+		transform: translateY(-5px);
+		#download,
+		#check {
+			transition: all 0.3s ease 0s;
+		}
 	}
+	&:active {
+		transform: translateY(0px) scale(0.9);
+	}
+	&.active {
+		background-color: #149a5064;
+		&:hover,
+		&:focus {
+			background-color: #149a6d81;
+		}
+	}
+
+}
+#download {
+	display: block;
+	transition: all 0.3s ease 0s;
+}
+#check {
+	display: none;
+	transition: all 0.3s ease 0s;
+	transform: translateY(-100px);
 }
 @include max767 {
 	.hero-title-block {

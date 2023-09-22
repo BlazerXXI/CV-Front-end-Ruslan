@@ -83,4 +83,21 @@ $(document).ready(function () {
 			? removeActiveMenu()
 			: null;
 	});
+
+	$(".btn-block__link").click(function () {
+		if (!this.classList.contains("active")) {
+			this.classList.add("active");
+			$("#download").css("transform", "translateY(-20px)");
+			setTimeout(() => {
+				$("#download").css("transform", "translateY(100px)");
+			}, 500);
+			setTimeout(() => {
+				$("#download").css("display", "none");
+				$("#check").css("display", "block");
+			}, 1000);
+			setTimeout(() => {
+				$("#check").css("transform", "translateY(0)");
+			}, 1500);
+		}
+	});
 });
