@@ -207,25 +207,22 @@ body {
 }
 
 /* -----------bg------------- */
-.bg {
-	background: url("../img/hero/shutterstock_1716854038-smallSize.jpg")
-		center/cover no-repeat;
+.hero__background-image {
+	z-index: -2;
 	position: fixed;
-	height: 100vh;
-	width: 100%;
 	top: 0;
 	left: 0;
-	z-index: -2;
-	&::after {
-		content: "";
-		background-color: #000;
+	width: 100vw;
+	height: 100vh;
+	img {
+		object-fit: cover;
+		object-position: center;
+		width: 100vw;
 		height: 100vh;
-		width: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		opacity: 0.6;
+		filter: brightness(0.4);
 	}
+}
+.background-image {
 }
 /* ------------main------------ */
 
