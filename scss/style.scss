@@ -227,7 +227,6 @@ body {
 /* ------------main------------ */
 
 .main {
-	// padding: 0 15px;
 	flex: 1 1 auto;
 	position: relative;
 	> *:not(:first-child) {
@@ -237,19 +236,13 @@ body {
 }
 /* ----------scroll-down-block------------ */
 .hero__scroll-down {
-	position: absolute;
-	bottom: 200px;
-	left: 0;
+	margin-top: 100px;
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	animation: jumpButton 1.5s ease infinite;
 	transition: all 0.3s ease 0s;
-	@include max767 {
-		// display: none;
-		bottom: 100px;
-	}
 }
 @keyframes jumpButton {
 	0% {
