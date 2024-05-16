@@ -34,7 +34,7 @@
 							</li>
 						</ul>
 					</nav>
-					<button class="header__menu">
+					<button title="Menu" type="button" class="header__menu">
 						<span class="header__menu-span"> </span>
 					</button>
 
@@ -81,6 +81,7 @@
 						<div class="hero__btn-block btn-block">
 							<a
 								target="_blank"
+								rel="noopener noreferrer nofollow"
 								href="./src/Karliuk_Ruslan_cv_Front-end-developer.pdf"
 								download="Karliuk_Ruslan_cv_Front-end-developer.pdf"
 								class="btn-block__link"
@@ -160,6 +161,9 @@
 								<h2>Redux</h2>
 							</li>
 							<li class="my-skills__item">
+								<h2>React Query</h2>
+							</li>
+							<li class="my-skills__item">
 								<h2>Next.js</h2>
 							</li>
 							<li class="my-skills__item">
@@ -203,153 +207,190 @@
 							</h2>
 						</div>
 
-						<div class="portfolio__slider slider">
-							<a
-								target="_blank"
-								href="https://blazerxxi.github.io/stretch-ceilings/"
-								class="portfolio-works__card"
-							>
-								<img
-									src="./img/portfolio/blazerxxi.github.io_stretch-ceilings_.png"
-									alt="portfolio work"
-								/>
-								<div class="hover-text">
-									<h2>STRETCH CEILINGS</h2>
-									<h3>HTML, CSS, React, JavaScript, SCSS</h3>
-								</div>
-							</a>
-							<a
-								target="_blank"
-								href="https://blazerxxi.github.io/Geleon/"
-								class="portfolio-works__card"
-							>
-								<img src="./img/portfolio/Geleon.png" alt="portfolio work" />
-								<div class="hover-text">
-									<h2>GELEON</h2>
-									<h3>HTML, CSS, jquery, Bootstrap, SCSS</h3>
-								</div></a
-							>
-							<a
-								target="_blank"
-								href="https://todo-list-react-iota-six.vercel.app/"
-								class="portfolio-works__card"
-							>
-								<img
-									src="./img/portfolio/todo-list-react-iota-six.vercel.app_.png"
-									alt="ToDo React List"
-								/>
-								<div class="hover-text">
-									<h2>ToDo React List</h2>
-									<h3>React, Redux, TypeScript, SCSS</h3>
-								</div></a
-							>
-							<a
-								target="_blank"
-								href="https://fuuuh.vercel.app/"
-								class="portfolio-works__card experem"
-							>
-								<img
-									src="./img/portfolio/fuuuh.png"
-									alt="portfolio work fuuuh bar"
-								/>
-								<div class="hover-text">
-									<h2>FUUUH BAR</h2>
-									<h3>HTML, CSS, Next.js, typescript, Tailwind, SCSS</h3>
-								</div>
-							</a>
-							<a
-								target="_blank"
-								href="https://react-website-erduaj6ps-blazerxxi.vercel.app/"
-								class="portfolio-works__card"
-							>
-								<img
-									src="./img/portfolio/react-website-erduaj6ps-blazerxxi.vercel.app_.png"
-									alt="portfolio work"
-								/>
-								<div class="hover-text">
-									<h2>React Website</h2>
-									<h3>HTML, CSS, React, JavaScript, Tailwind</h3>
-								</div>
-							</a>
-							<a
-								target="_blank"
-								href="https://archi-web.vercel.app/"
-								class="portfolio-works__card"
-							>
-								<img src="./img/portfolio/archi.png" alt="portfolio work" />
-								<div class="hover-text">
-									<h2>Archi Web</h2>
-									<h3>HTML, CSS, React, JavaScript, Tailwind</h3>
-								</div>
-							</a>
-
-							<a
-								target="_blank"
-								href="https://relvise-website.netlify.app/"
-								class="portfolio-works__card"
-							>
-								<img
-									src="./img/portfolio/blazerxxi.github.io_Relvise_.png"
-									alt="portfolio work"
-								/>
-								<div class="hover-text">
-									<h2>Relvise Website</h2>
-									<h3>HTML, CSS</h3>
-								</div>
-							</a>
-							<a
-								target="_blank"
-								href="https://britlex-language-school.netlify.app/"
-								class="portfolio-works__card"
-							>
-								<img
-									src="./img/portfolio/blazerxxi.github.io_Britlex-Language-School_1.png"
-									alt="portfolio work"
-								/>
-								<div class="hover-text">
-									<h2>Britlex Language School</h2>
-									<h3>HTML, CSS</h3>
-								</div>
-							</a>
-							<a target="_blank" href="./" class="portfolio-works__card">
-								<img
-									src="./img/portfolio/blazerxxi.github.io_CV-Front-end-dev_.png"
-									alt="portfolio work"
-								/>
-								<div class="hover-text">
-									<h2>My CV Frontend developer</h2>
-									<h3>HTML, CSS, SCSS, JavaScript, JQuery</h3>
-								</div>
-							</a>
-							<a
-								target="_blank"
-								href=" https://blazerxxi.github.io/bakery-web/"
-								class="portfolio-works__card"
-							>
-								<img
-									src="./img/portfolio/blazerxxi.github.io_bakery-site_.png"
-									alt="portfolio work"
-								/>
-								<div class="hover-text">
-									<h2>Bakery Web Site</h2>
-									<h3>HTML, CSS</h3>
-								</div>
-							</a>
-							<a
-								target="_blank"
-								href="https://furniture-test-web-site.netlify.app/"
-								class="portfolio-works__card"
-							>
-								<img
-									src="./img/portfolio/blazerxxi.github.io_Furniture-Test-in-developing-_1.png"
-									alt="portfolio work"
-								/>
-								<div class="hover-text">
-									<h2>Furniture</h2>
-									<h3>HTML, CSS</h3>
-								</div>
-							</a>
-						</div>
+						<ul class="portfolio__slider slider">
+							<li class="portfolio-works__card">
+								<a
+									target="_blank"
+									rel="noopener noreferrer nofollow"
+									href="https://blazerxxi.github.io/stretch-ceilings/"
+								>
+									<img
+										src="./img/portfolio/blazerxxi.github.io_stretch-ceilings_.png"
+										alt="portfolio work"
+									/>
+									<div class="hover-text">
+										<h2>STRETCH CEILINGS</h2>
+										<h3>HTML, CSS, React, JavaScript, SCSS</h3>
+									</div>
+								</a>
+							</li>
+							<li class="portfolio-works__card">
+								<a
+									target="_blank"
+									rel="noopener noreferrer nofollow"
+									href="https://blazerxxi.github.io/Geleon/"
+								>
+									<img src="./img/portfolio/Geleon.png" alt="portfolio work" />
+									<div class="hover-text">
+										<h2>GELEON</h2>
+										<h3>HTML, CSS, jquery, Bootstrap, SCSS</h3>
+									</div>
+								</a>
+							</li>
+							<li class="portfolio-works__card">
+								<a
+									target="_blank"
+									rel="noopener noreferrer nofollow"
+									href="https://todo-list-react-iota-six.vercel.app/"
+								>
+									<img
+										src="./img/portfolio/todo-list-react-iota-six.vercel.app_.png"
+										alt="ToDo React List"
+									/>
+									<div class="hover-text">
+										<h2>ToDo React List</h2>
+										<h3>React, Redux, TypeScript, SCSS</h3>
+									</div>
+								</a>
+							</li>
+							<li class="portfolio-works__card">
+								<a
+									target="_blank"
+									rel="noopener noreferrer nofollow"
+									href="https://the-rick-and-morty-react.vercel.app/"
+								>
+									<img
+										src="./img/portfolio/the-rick-and-morty-react.vercel.app_.png"
+										alt="The Rick and Morty"
+									/>
+									<div class="hover-text">
+										<h2>The Rick and Morty</h2>
+										<h3>React, React Query, TypeScript, Tailwind</h3>
+									</div>
+								</a>
+							</li>
+							<li class="portfolio-works__card">
+								<a
+									target="_blank"
+									rel="noopener noreferrer nofollow"
+									href="https://fuuuh.vercel.app/"
+								>
+									<img
+										src="./img/portfolio/fuuuh.png"
+										alt="portfolio work fuuuh bar"
+									/>
+									<div class="hover-text">
+										<h2>FUUH BAR</h2>
+										<h3>HTML, CSS, Next.js, typescript, Tailwind, SCSS</h3>
+									</div>
+								</a>
+							</li>
+							<li class="portfolio-works__card">
+								<a
+									target="_blank"
+									rel="noopener noreferrer nofollow"
+									href="https://react-website-erduaj6ps-blazerxxi.vercel.app/"
+								>
+									<img
+										src="./img/portfolio/react-website-erduaj6ps-blazerxxi.vercel.app_.png"
+										alt="portfolio work"
+									/>
+									<div class="hover-text">
+										<h2>React Website</h2>
+										<h3>HTML, CSS, React, JavaScript, Tailwind</h3>
+									</div>
+								</a>
+							</li>
+							<li class="portfolio-works__card">
+								<a
+									target="_blank"
+									rel="noopener noreferrer nofollow"
+									href="https://archi-web.vercel.app/"
+								>
+									<img src="./img/portfolio/archi.png" alt="portfolio work" />
+									<div class="hover-text">
+										<h2>Archi Web</h2>
+										<h3>HTML, CSS, React, JavaScript, Tailwind</h3>
+									</div>
+								</a>
+							</li>
+							<li class="portfolio-works__card">
+								<a
+									target="_blank"
+									rel="noopener noreferrer nofollow"
+									href="https://relvise-website.netlify.app/"
+								>
+									<img
+										src="./img/portfolio/blazerxxi.github.io_Relvise_.png"
+										alt="portfolio work"
+									/>
+									<div class="hover-text">
+										<h2>Relvise Website</h2>
+										<h3>HTML, CSS</h3>
+									</div>
+								</a>
+							</li>
+							<li class="portfolio-works__card">
+								<a
+									target="_blank"
+									rel="noopener noreferrer nofollow"
+									href="https://britlex-language-school.netlify.app/"
+								>
+									<img
+										src="./img/portfolio/blazerxxi.github.io_Britlex-Language-School_1.png"
+										alt="portfolio work"
+									/>
+									<div class="hover-text">
+										<h2>Britlex Language School</h2>
+										<h3>HTML, CSS</h3>
+									</div>
+								</a>
+							</li>
+							<li class="portfolio-works__card">
+								<a target="_blank" rel="noopener noreferrer nofollow" href="./">
+									<img
+										src="./img/portfolio/blazerxxi.github.io_CV-Front-end-dev_.png"
+										alt="portfolio work"
+									/>
+									<div class="hover-text">
+										<h2>My CV Frontend developer</h2>
+										<h3>HTML, CSS, SCSS, JavaScript, JQuery</h3>
+									</div>
+								</a>
+							</li>
+							<li class="portfolio-works__card">
+								<a
+									target="_blank"
+									rel="noopener noreferrer nofollow"
+									href=" https://blazerxxi.github.io/bakery-web/"
+								>
+									<img
+										src="./img/portfolio/blazerxxi.github.io_bakery-site_.png"
+										alt="portfolio work"
+									/>
+									<div class="hover-text">
+										<h2>Bakery Web Site</h2>
+										<h3>HTML, CSS</h3>
+									</div>
+								</a>
+							</li>
+							<li class="portfolio-works__card">
+								<a
+									target="_blank"
+									rel="noopener noreferrer nofollow"
+									href="https://furniture-test-web-site.netlify.app/"
+								>
+									<img
+										src="./img/portfolio/blazerxxi.github.io_Furniture-Test-in-developing-_1.png"
+										alt="portfolio work"
+									/>
+									<div class="hover-text">
+										<h2>Furniture</h2>
+										<h3>HTML, CSS</h3>
+									</div>
+								</a>
+							</li>
+						</ul>
 					</div>
 				</section>
 				<section id="contacts" class="contacts">
@@ -377,18 +418,21 @@
 								<div class="link-social">
 									<a
 										target="_blank"
+										rel="noopener noreferrer nofollow"
 										href="https://t.me/BlazerXXI"
 										class="social-block__link"
 										><i class="social-block__telegram fa-brands fa-telegram"></i
 									></a>
 									<a
 										target="_blank"
+										rel="noopener noreferrer nofollow"
 										href="https://github.com/BlazerXXI"
 										class="social-block__link"
 										><i class="social-block__github fa-brands fa-github"></i
 									></a>
 									<a
 										target="_blank"
+										rel="noopener noreferrer nofollow"
 										href="https://www.linkedin.com/in/blazerxxi/"
 										class="social-block__link"
 										><i
